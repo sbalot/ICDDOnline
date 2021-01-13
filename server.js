@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+var multer = require('multer');
+var cors = require('cors');
 
 const users = require("./routes/api/users");
 
@@ -13,6 +15,15 @@ app.use(
     extended: false
   })
 );
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'D:/PhD/Courses/FullStack/ICDD/hypergraphql_installation/hypergraphql_installation/src/main/resources') 
+  },
+  filename: function (req, file, cb) {
+    cb(null, "ICDD.ttl" )
+
+  }
+})
 app.use(bodyParser.json());
 
 // DB Config

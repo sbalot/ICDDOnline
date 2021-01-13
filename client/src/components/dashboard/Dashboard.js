@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import Iframe from 'react-iframe';
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -19,10 +20,20 @@ class Dashboard extends Component {
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+                You are logged into {" "}
+                <span style={{ fontFamily: "monospace" }}>ICDDOnline</span> app 👏
               </p>
             </h4>
+            <div className="HGQL"> 
+          <p align="right"><Iframe url="http://localhost:8082/graphiql"
+            width="500px"
+            height="650px"
+            id="qgl"
+            position="relative"
+            display="block"
+        />
+        </p>
+        </div>
             <button
               style={{
                 width: "150px",
