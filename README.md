@@ -1,8 +1,8 @@
-# mern-auth
+# ICDDOnline - A simple implementation of ICDD
 
 ![Final App](appGIF.gif)
 
-An initial implementation of the Container concepts according to ISO 21597, DIN SPEC 91391, ISO 19650, and LDP. 
+An initial implementation of the Container concepts according to ICDD ISO 21597, DIN SPEC 91391, ISO 19650, and LDP. 
 
 ## Current Status
 
