@@ -15,6 +15,27 @@ This project uses the following technologies:
 - [MongoDB](https://www.mongodb.com/) for the database
 - [Redux](https://redux.js.org/basics/usagewithreact) for state management between React components
 
+## Running the Code
+1. Install MongoDB and create credentials. Add `MONGOURI` from your [mLab](http://mlab.com) database in `config/keys.js`.
+
+```javascript
+module.exports = {
+  mongoURI: "YOUR_MONGO_URI_HERE",
+  secretOrKey: "secret"
+};
+```
+2. Install all dependencies by running the below command for client and server dependent packages
+```javascript
+npm install && npm run client-install
+```
+
+3. Start up both client and server using the below command:
+```javascript
+npm run dev
+```
+
+4. Webpage opens on http://localhost:3000 (which is the client address)
+
 ## Inspiration
 
 This work draws from the tutorials below:
@@ -23,27 +44,3 @@ This work draws from the tutorials below:
 - [Build a Login/Auth App with the MERN Stack — Part 2 (Frontend & Redux Setup)](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-2-frontend-6eac4e38ee82)
 - [Build a Login/Auth App with the MERN Stack — Part 3 (Linking Redux with React Components)](https://blog.bitsrc.io/build-a-login-auth-app-with-the-mern-stack-part-3-react-components-88190f8db718)
 
-## Configuration
-
-Make sure to add your own `MONGOURI` from your [mLab](http://mlab.com) database in `config/keys.js`.
-
-```javascript
-module.exports = {
-  mongoURI: "YOUR_MONGO_URI_HERE",
-  secretOrKey: "secret"
-};
-```
-
-## Quick Start
-
-```javascript
-// Install dependencies for server & client
-npm install && npm run client-install
-
-// Run client & server with concurrently
-npm run dev
-
-// Server runs on http://localhost:5000 and client on http://localhost:3000
-```
-
-For deploying to Heroku, please refer to [this](https://www.youtube.com/watch?v=71wSzpLyW9k) helpful video by TraversyMedia.
